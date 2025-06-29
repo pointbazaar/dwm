@@ -19,6 +19,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -29,7 +30,12 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "Thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
@@ -62,6 +68,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", "--detach", NULL };
+
+static const char *firefox_cmd[]  = { "firefox", NULL };
+static const char *spotify_cmd[]  = { "spotify-launcher", NULL };
+static const char *thunderbird_cmd[]  = { "thunderbird", NULL };
+
+static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
