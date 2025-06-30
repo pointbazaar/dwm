@@ -72,23 +72,31 @@ static const char *termcmd[]  = { "kitty", "--detach", NULL };
 static const char *firefox_cmd[]  = { "firefox", NULL };
 static const char *spotify_cmd[]  = { "spotify-launcher", NULL };
 static const char *thunderbird_cmd[]  = { "thunderbird", NULL };
+static const char *slock_cmd[]  = { "slock", NULL };
 
 static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = slock_cmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	//{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_c,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_t,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+
+	// change size of master vs stack area
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_n,      setmfact,       {.f = +0.05} },
+
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+
+	// close window
+	{ MODKEY|ShiftMask,             XK_w,      killclient,     {0} },
+
 	//{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	//{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	//{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
