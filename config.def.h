@@ -73,8 +73,9 @@ static const char *firefox_cmd[]  = { "firefox", NULL };
 static const char *spotify_cmd[]  = { "spotify-launcher", NULL };
 static const char *thunderbird_cmd[]  = { "thunderbird", NULL };
 static const char *slock_cmd[]  = { "slock", NULL };
+static const char *dwmstatus_cmd[]  = { "dwmstatus", NULL };
 
-static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd};
+static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd, dwmstatus_cmd};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
