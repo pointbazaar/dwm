@@ -84,10 +84,13 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      spawn,          {.v = slock_cmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	//{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_c,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_t,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+
+	// change which window is focused
+	{ MODKEY,                       XK_c,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_t,      focusstack,     {.i = +1 } },
+
+	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	//{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 
 	// change size of master vs stack area
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
