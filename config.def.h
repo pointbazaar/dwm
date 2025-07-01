@@ -36,6 +36,7 @@ static const Rule rules[] = {
 	{ "spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
 	{ "Thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
 	{ "thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
