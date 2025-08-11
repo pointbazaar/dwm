@@ -32,11 +32,14 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
-	{ "spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "signal",   NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Signal",   NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "Thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
 	{ "thunderbird",  NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "spotify",  NULL,       NULL,       1 << 5,       0,           -1 },
+	{ "discord",  NULL,       NULL,       1 << 6,       0,           -1 },
 };
 
 /* layout(s) */
@@ -75,8 +78,10 @@ static const char *spotify_cmd[]  = { "spotify-launcher", NULL };
 static const char *thunderbird_cmd[]  = { "thunderbird", NULL };
 static const char *slock_cmd[]  = { "slock", NULL };
 static const char *dwmstatus_cmd[]  = { "dwmstatus", NULL };
+static const char *discord_cmd[]  = { "discord", NULL };
+static const char *signal_cmd[]  = { "signal-desktop", NULL };
 
-static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd, dwmstatus_cmd};
+static const char **startup_programs[] = { termcmd, firefox_cmd, spotify_cmd, thunderbird_cmd, dwmstatus_cmd, discord_cmd, signal_cmd};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
